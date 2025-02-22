@@ -9,7 +9,6 @@
     "watch": "npx tsc -w",
     "start": "npx nodemon dist/index.js",
     "dev": "npx concurrently \" npm run watch\" \"npm run start\""
-   
   },
   "keywords": [],
   "author": "",
@@ -19,7 +18,11 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
+    "@types/dotenv": "^8.2.3",
+    "@types/ioredis": "^5.0.0",
+    "bullmq": "^5.41.5",
     "express": "^4.21.2",
+    "ioredis": "^5.5.0",
     "nodemon": "^3.1.9"
   }
 }

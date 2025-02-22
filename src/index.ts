@@ -1,8 +1,12 @@
-import express from "express";
+import express ,{Express} from "express";
 import serverConfig from "./config/server.config";
-const app=express();
+import apirouter from "./routes";
+const app:Express=express();
 
-app.listen(serverConfig.Port,()=>{
-    console.log(`Server Started at port${serverConfig.Port}`)
+console.log("hello friends")
+
+app.use('/api',apirouter);
+app.listen(serverConfig.Port||3000,()=>{
+    console.log(`Server Started at port ${serverConfig.Port}`)
    
 })
